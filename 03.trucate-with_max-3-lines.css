@@ -1,0 +1,16 @@
+.max-three-lines {
+  /* Enables the use of -webkit-line-clamp */
+  display: -webkit-box;
+
+  /* Limits the content to 3 lines before cutting off */
+  -webkit-line-clamp: 3;
+
+  /* Sets the box orientation to vertical, required for line-clamp to work */
+  -webkit-box-orient: vertical;
+
+  /* Hides any overflowing content beyond the third line */
+  overflow: hidden;
+
+  /* Adds an ellipsis (...) at the point where text is truncated */
+  text-overflow: ellipsis;
+}
