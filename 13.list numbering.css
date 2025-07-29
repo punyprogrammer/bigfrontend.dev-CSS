@@ -1,0 +1,4 @@
+ol > li::marker {
+  color: #f44336;
+  content: counters(list-item, ".") " ";
+}
