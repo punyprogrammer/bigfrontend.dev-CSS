@@ -1,0 +1,16 @@
+
+.row {
+  height: 50px;
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Even rows: alternate background color */
+.row:nth-child(even) {
+  background-color: #ddd;
+}
+.row:not(:first-child){
+  border-top:none;
+}
