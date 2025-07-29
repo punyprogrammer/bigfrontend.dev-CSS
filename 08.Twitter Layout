@@ -1,0 +1,90 @@
+.container {
+  height: 150px;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr); /* Default layout: left + middle */
+  justify-content: center;
+  gap: 0px;
+  padding: 0 0; /* Will be adjusted in media queries */
+  box-sizing: border-box;
+}
+
+/* Left column default */
+.left {
+  background-color: #eee;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Middle column stretching with max 240px */
+.middle {
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 240px;
+
+}
+
+/* Right column initially hidden */
+.right {
+  background-color: #eee;
+  min-width: 120px;
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+}
+
+/* ➕ Medium: Show right column and add side spacing */
+@media (min-width:300px){
+  .container{
+    padding: 0 10px;
+  }
+
+}
+@media (min-width:360px){
+  .container{
+    padding: 0 40px;
+  }
+
+}
+@media (min-width:400px){
+  .container{
+    padding: 0 60px;
+  }
+
+}
+@media (min-width: 420px) {
+  .container {
+    grid-template-columns: 40px minmax(0, 240px) 120px;
+    padding: 0 10px;
+  }
+
+  .right {
+    display: flex;
+  }
+}
+@media (min-width: 460px) {
+  .container {
+    grid-template-columns: 80px minmax(0, 240px) 120px;
+    padding: 0 10px;
+  }
+
+  .right {
+    display: flex;
+  }
+}
+
+
+/* ➕ Large: Expand left to 80px */
+@media (min-width: 600px) {
+  .container {
+    grid-template-columns: 80px minmax(0, 240px) 120px;
+  }
+
+  .left {
+    min-width: 80px;
+  }
+}
