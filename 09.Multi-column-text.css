@@ -1,0 +1,6 @@
+  .three-column-text {
+    column-count: 3;
+    column-rule: 1px solid #ddd;
+    padding: 10px;
+    column-gap: 20px;
+  }
